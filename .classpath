@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="BoulderDash-BaseProject/BoulderDash-BaseProject/BoulderDash/contract/src/main/java"/>
+	<classpathentry kind="src" path="BoulderDash-BaseProject/BoulderDash-BaseProject/BoulderDash/contract/src/test/java"/>
+	<classpathentry kind="src" path="BoulderDash-BaseProject/BoulderDash-BaseProject/BoulderDash/controller/src/main/java"/>
+	<classpathentry kind="src" path="BoulderDash-BaseProject/BoulderDash-BaseProject/BoulderDash/main/src/main/java"/>
+	<classpathentry kind="src" path="BoulderDash-BaseProject/BoulderDash-BaseProject/BoulderDash/model/src/main/java"/>
+	<classpathentry kind="src" path="BoulderDash-BaseProject/BoulderDash-BaseProject/BoulderDash/view/src/main/java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
