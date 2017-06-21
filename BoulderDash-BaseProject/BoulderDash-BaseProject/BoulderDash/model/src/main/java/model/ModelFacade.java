@@ -4,6 +4,7 @@ import java.sql.SQLException;
 import java.util.List;
 
 import model.dao.ExampleDAO;
+import model.dao.LevelDAO;
 
 /**
  * <h1>The Class ModelFacade provides a facade of the Model component.</h1>
@@ -19,7 +20,13 @@ public class ModelFacade implements IModel {
     public ModelFacade() {
         super();
     }
-
+    
+    @Override
+    public Level getLevelById(final int lvl) throws SQLException {
+    	return LevelDAO.getLevelById(lvl);
+    }
+    
+    
     /*
      * (non-Javadoc)
      * @see model.IModel#getExampleById(int)
