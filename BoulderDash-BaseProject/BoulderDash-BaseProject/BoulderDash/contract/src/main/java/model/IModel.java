@@ -11,6 +11,10 @@ import java.util.List;
  */
 public interface IModel {
 
+	
+	Level getLevelById(int lvl) throws SQLException;
+	
+	
     /**
      * Gets the example by id.
      *
@@ -20,6 +24,9 @@ public interface IModel {
      * @throws SQLException
      *             the SQL exception
      */
+	
+	
+	
     Example getExampleById(int id) throws SQLException;
 
     /**
