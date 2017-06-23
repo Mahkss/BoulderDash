@@ -5,7 +5,7 @@ import projet.secours.Game;
 public class Launcheer {
 	
 	public static void main(String[] args){
-		Game game = new Game("Title Game!", 1000, 1000);
+		Game game = new Game("Title Game!", 800, 800);
 		game.start();
 	}
 

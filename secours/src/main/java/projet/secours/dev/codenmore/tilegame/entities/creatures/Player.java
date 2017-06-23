@@ -94,4 +94,20 @@ public class Player extends Creature {
 		 }
 	}
 	
+	public float getSpawnX() {
+		return this.x;
+	}
+	
+	public void setSpawnX(float x) {
+		this.x = x;
+	}
+	
+	public float getSpawnY() {
+		return this.y;
+	}
+	
+	public void setSpawnY(float y) {
+		this.y = y;
+	}
+	
 }

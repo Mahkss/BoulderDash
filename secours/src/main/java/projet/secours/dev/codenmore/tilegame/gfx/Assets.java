@@ -6,11 +6,11 @@ public class Assets {
 	
 	private static final int width = 16, height = 16;
 	
-	public static BufferedImage wall, mud, rock, diamond, exit, monster1, monster2;
+	public static BufferedImage wall, mud, emptymud, rock, diamond, exit, monster1, monster2;
 	public static BufferedImage[] player_down_left, player_down_right, player_up_left, player_up_right, player_left, player_right, player_afk;
 	
 	public static void init(){
-		SpriteSheet sheet = new SpriteSheet(ImageLoader.LoadImage("/textures/74336.png"));
+		SpriteSheet sheet = new SpriteSheet(ImageLoader.LoadImage("/Spritesperso.png"));
 		
 		player_down_left = new BufferedImage[2];
 		
@@ -49,10 +49,11 @@ public class Assets {
 		player_afk[0] = sheet.crop(0, 0, width, height);
 		player_afk[1] = sheet.crop(width, 0, width, height);
 		
-		SpriteSheet sheet2 = new SpriteSheet(ImageLoader.LoadImage("/textures/Spritedecorsetmonstres.png"));
+		SpriteSheet sheet2 = new SpriteSheet(ImageLoader.LoadImage("/Sprites.png"));
 		
 		wall  = sheet2.crop(0, 0, width, height);
 		mud = sheet2.crop(width, 0, width, height);
+		emptymud = sheet2.crop(width * 2, 0, width, height);
 		rock = sheet2.crop(width * 3, 0, width, height);
 		diamond = sheet2.crop(width * 4, 0, width, height);
 		exit = sheet2.crop(width * 6, 0, width, height);

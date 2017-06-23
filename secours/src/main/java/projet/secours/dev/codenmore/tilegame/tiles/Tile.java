@@ -8,12 +8,13 @@ public class Tile {
 	//STATIC STUFF HERE
 	
 	public static Tile[] tiles = new Tile[256];
-	public static Tile mudTile = new MudTile(0);
-	public static Tile rockTile = new RockTile(1);
-	public static Tile diamondTile = new DiamondTile(2);
+	public static Tile wallTile = new WallTile(0);
+	public static Tile mudTile = new MudTile(1);
+	public static Tile emptyMudTile = new EmptyMudTile(2);
+	public static Tile rockTile = new RockTile(3);
+	public static Tile diamondTile = new DiamondTile(4);
 	
 	//CLASS
-	
 	public static final int TILEWIDTH = 64, TILEHEIGHT = 64;
 	
 	protected BufferedImage texture;

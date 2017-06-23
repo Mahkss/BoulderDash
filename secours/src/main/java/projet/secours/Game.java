@@ -11,6 +11,7 @@ import projet.secours.dev.codenmore.tilegame.input.KeyManager;
 import projet.secours.dev.codenmore.tilegame.states.GameState;
 import projet.secours.dev.codenmore.tilegame.states.MenuState;
 import projet.secours.dev.codenmore.tilegame.states.State;
+import projet.secours.dev.codenmore.tilegame.worlds.World;
 
 public class Game implements Runnable {
 	
@@ -57,6 +58,9 @@ public class Game implements Runnable {
 		gameState = new GameState(handler);
 		menuState = new MenuState(handler);
 		State.setState(gameState);
+		
+		
+		
 	}
 	
 	private void tick(){ /*This method is here to update the variables and the position of things on the screen*/
