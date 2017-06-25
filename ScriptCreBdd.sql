@@ -46,3 +46,9 @@ CREATE TABLE Carre(
 
 ALTER TABLE Carre ADD CONSTRAINT FK_Carre_Id_Carte FOREIGN KEY (Id_Carte) REFERENCES Niveau(Id_Carte);
 ALTER TABLE Carre ADD CONSTRAINT FK_Carre_Id_Type FOREIGN KEY (Id_Type) REFERENCES Type(Id_Type);
+
+DELIMITER $$
+CREATE DEFINER=`root`@`localhost` PROCEDURE `GetLevel`(IN `lvl` INT(4))
+    READS SQL DATA
+SELECT CooX, CooY, Id_Type FROM carré WHERE Id_Carte = lvl$$
+DELIMITER ;
