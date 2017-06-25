@@ -61,6 +61,7 @@ public class Player extends Creature {
 		
 		if(handler.getKeyManager().up)
 			yMove = -speed;
+		
 		if(handler.getKeyManager().down)
 			yMove = speed;
 		if(handler.getKeyManager().left)
@@ -76,8 +77,8 @@ public class Player extends Creature {
 		
 		
 		//Hitbox
-		g.setColor(Color.red);
-		g.fillRect((int) (x + bounds.x - handler.getGameCamera().getxOffset()), (int) (y + bounds.y - handler.getGameCamera().getyOffset()), bounds.width, bounds.height);
+		//g.setColor(Color.red);
+		//g.fillRect((int) (x + bounds.x - handler.getGameCamera().getxOffset()), (int) (y + bounds.y - handler.getGameCamera().getyOffset()), bounds.width, bounds.height);
 	}
 	
 	private BufferedImage getCurrentAnimationFrame(){

@@ -1,6 +1,6 @@
 package projet.secours.dev.codenmore.tilegame.tiles;
 
-import java.awt.image.BufferedImage;
+
 
 import projet.secours.dev.codenmore.tilegame.gfx.Assets;
 

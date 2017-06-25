@@ -38,8 +38,11 @@ public abstract class Creature extends Entity {
 			
 			if(!collisionWithTile(tx, (int) (y + bounds.y) / Tile.TILEHEIGHT) && !collisionWithTile(tx, (int) (y + bounds.y + bounds.height) / Tile.TILEHEIGHT)){
 				x += xMove;
+				
+				
 			}else{
 				x = tx * Tile.TILEWIDTH - bounds.x - bounds.width - 1;
+				
 			}
 			
 		}else if(xMove < 0){//Moving left
@@ -60,6 +63,7 @@ public abstract class Creature extends Entity {
 			
 			if(!collisionWithTile((int) (x + bounds.x) / Tile.TILEWIDTH, ty) && !collisionWithTile((int) (x + bounds.x + bounds.width) / Tile.TILEWIDTH, ty)){
 				y += yMove;
+				
 			}else{
 				y = ty * Tile.TILEHEIGHT + Tile.TILEHEIGHT - bounds.y;
 			}
@@ -68,6 +72,7 @@ public abstract class Creature extends Entity {
 			
 			if(!collisionWithTile((int) (x + bounds.x) / Tile.TILEWIDTH, ty) && !collisionWithTile((int) (x + bounds.x + bounds.width) / Tile.TILEWIDTH, ty)){
 				y += yMove;
+				
 			}else{
 				y = ty * Tile.TILEHEIGHT - bounds.y - bounds.height - 1;
 			}

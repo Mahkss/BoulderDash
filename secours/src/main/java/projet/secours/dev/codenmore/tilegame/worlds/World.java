@@ -32,17 +32,18 @@ public class World {
 		
 		loadWorld(this);
 		
+		if (WORLDID == 1) {
+			this.spawnX = 14 * 64;
+			this.spawnY = 5 * 64;
+		}
+		if (WORLDID == 2) {
+			this.spawnX = width/64;
+			this.spawnY = height/64;
+		}
+		
 		entityManager.getPlayer().setX(spawnX);
 		entityManager.getPlayer().setY(spawnY);
 		
-		if (WORLDID == 1) {
-			this.spawnX = 15;
-			this.spawnY = 6;
-		}
-		if (WORLDID == 2) {
-			this.spawnX = 35;
-			this.spawnY = 5;
-		}
 		
 		
 	}
@@ -55,12 +56,17 @@ public class World {
 		
 		
 		int xStart = (int) Math.max(0, handler.getGameCamera().getxOffset() / Tile.TILEWIDTH);
-		int xEnd = (int) Math.min(width, (handler.getGameCamera().getxOffset() + handler.getWidth()) / Tile.TILEWIDTH +1);
+		int xEnd = (int) Math.min(width / 64, (handler.getGameCamera().getxOffset() + handler.getWidth()) / Tile.TILEWIDTH +1);
 		int yStart = (int) Math.max(0, handler.getGameCamera().getyOffset() / Tile.TILEHEIGHT);
-		int yEnd = (int) Math.min(height, (handler.getGameCamera().getyOffset() + handler.getHeight()) / Tile.TILEHEIGHT +1);
+		int yEnd = (int) Math.min(height / 64, (handler.getGameCamera().getyOffset() + handler.getHeight()) / Tile.TILEHEIGHT +1);
 		
 		for(int y = yStart; y < yEnd; y++){
 			for(int x = xStart; x < xEnd; x++){
+				
+				if (getTile(x, y) == Tile.diamondTile || getTile(y, x) == Tile.rockTile) {
+					Tile.mudTile.render(g, (int) (x * Tile.TILEWIDTH - handler.getGameCamera().getxOffset()), (int) (y * Tile.TILEHEIGHT - handler.getGameCamera().getyOffset()));
+					
+				}
 				getTile(x, y).render(g, (int) (x * Tile.TILEWIDTH - handler.getGameCamera().getxOffset()), (int) (y * Tile.TILEHEIGHT - handler.getGameCamera().getyOffset()));
 			}
 		}
@@ -70,21 +76,23 @@ public class World {
 	
 	public Tile getTile(int x, int y){
 		if(x < 0 || y < 0 || x >= width || y >= height)
-			return Tile.emptyMudTile;
+			return Tile.mudTile;
 		
-		Tile t = Tile.tiles[tiles[y][x]];
+		Tile t = Tile.tiles[tiles[x][y]];
 		if(t == null)
-			return Tile.emptyMudTile;
+			return Tile.mudTile;
 		return t;
 	}
+	
 	
 	public void setTiles (int type, int x, int y) {
 		this.tiles[x][y] = type;
 	}
 	
+	
 	public void loadWorld(World world){
 		
-		world.tiles = new int[40][31];
+		world.tiles = new int[60][60];
 		try {
 			WorldDAO.getLevelById(world, WORLDID);
 		} catch (SQLException e) {
