@@ -6,3 +6,10 @@ La projet final se trouve dans le dossier "secours".
 
 
 1 - copier l'intérieur de BoulderDash.txt dans une nouvelle base de donnée appelée "bouderdash".
+
+
+
+
+Pour ce qui est de la Java Doc : 
+
+Les fichiers *BDDConnector*, *Index-files* et *projet* sont dans le même répertoire aisni que le CONTENU du dossier *DocHtml*
