@@ -38,23 +38,27 @@ public class World {
 		if (WORLDID == 1) {
 			this.spawnX = 14 * 64;
 			this.spawnY = 5 * 64;
-			this.counter = 9;
+			this.counter = 14;
 		}
 		if (WORLDID == 2) {
 			this.spawnX = 34 * 64;
 			this.spawnY = 4 * 64;
+			this.counter = 15;
 		}
 		if (WORLDID == 3) {
 			this.spawnX = 19 * 64;
 			this.spawnY = 14 * 64;
+			this.counter = 17;
 		}
 		if (WORLDID == 4) {
 			this.spawnX = 3 * 64;
 			this.spawnY = 19 * 64;
+			this.counter = 20;
 		}
 		if (WORLDID == 5) {
 			this.spawnX = 19 * 64;
 			this.spawnY = 14 * 64;
+			this.counter = 9;
 		}
 		
 		entityManager.getPlayer().setX(spawnX);
