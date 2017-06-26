@@ -24,19 +24,6 @@ DELIMITER $$
 --
 -- Procédures
 --
-CREATE DEFINER=`root`@`localhost` PROCEDURE `findAllExamples` ()  NO SQL
-SELECT id, name
-FROM example$$
-
-CREATE DEFINER=`root`@`localhost` PROCEDURE `findExampleById` (IN `id` INT)  NO SQL
-SELECT id, name
-FROM example
-WHERE example.id = id$$
-
-CREATE DEFINER=`root`@`localhost` PROCEDURE `findExampleByName` (IN `name` VARCHAR(255))  NO SQL
-SELECT id, name
-FROM example
-WHERE example.name = name$$
 
 CREATE DEFINER=`root`@`localhost` PROCEDURE `GetLevel` (IN `lvl` INT(4))  READS SQL DATA
 SELECT CooX, CooY, Id_Type FROM carré WHERE Id_Carte = lvl$$
