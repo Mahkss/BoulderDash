@@ -1,11 +1,14 @@
+C:\Users\maxpa\Desktop\BoulderDash-master\BoulderDash-master\secours\src\main\java\projet\secours\dev\codenmore\tilegame\display\EndGame.java
 C:\Users\maxpa\Desktop\BoulderDash-master\BoulderDash-master\secours\src\main\java\BDDConnector\BoulderDashBDDConnector.java
 C:\Users\maxpa\Desktop\BoulderDash-master\BoulderDash-master\secours\src\main\java\projet\secours\dev\codenmore\tilegame\tiles\RockTile.java
 C:\Users\maxpa\Desktop\BoulderDash-master\BoulderDash-master\secours\src\main\java\projet\secours\dev\codenmore\tilegame\entities\creatures\Creature.java
 C:\Users\maxpa\Desktop\BoulderDash-master\BoulderDash-master\secours\src\main\java\projet\secours\dev\codenmore\tilegame\entities\creatures\Player.java
 C:\Users\maxpa\Desktop\BoulderDash-master\BoulderDash-master\secours\src\main\java\projet\secours\dev\codenmore\tilegame\tiles\EmptyMudTile.java
+C:\Users\maxpa\Desktop\BoulderDash-master\BoulderDash-master\secours\src\main\java\projet\secours\dev\codenmore\tilegame\entities\creatures\Bat.java
 C:\Users\maxpa\Desktop\BoulderDash-master\BoulderDash-master\secours\src\main\java\projet\secours\dev\codenmore\tilegame\entities\Entity.java
 C:\Users\maxpa\Desktop\BoulderDash-master\BoulderDash-master\secours\src\main\java\projet\secours\dev\codenmore\tilegame\entities\statics\StaticEntity.java
 C:\Users\maxpa\Desktop\BoulderDash-master\BoulderDash-master\secours\src\main\java\projet\secours\dev\codenmore\tilegame\utils\Utils.java
+C:\Users\maxpa\Desktop\BoulderDash-master\BoulderDash-master\secours\src\main\java\projet\secours\dev\codenmore\tilegame\entities\creatures\Butterfly.java
 C:\Users\maxpa\Desktop\BoulderDash-master\BoulderDash-master\secours\src\main\java\projet\secours\dev\codenmore\tilegame\tiles\DiamondTile.java
 C:\Users\maxpa\Desktop\BoulderDash-master\BoulderDash-master\secours\src\main\java\projet\secours\dev\codenmore\tilegame\Launcheer.java
 C:\Users\maxpa\Desktop\BoulderDash-master\BoulderDash-master\secours\src\main\java\projet\secours\dev\codenmore\tilegame\tiles\Tile.java
@@ -27,4 +30,5 @@ C:\Users\maxpa\Desktop\BoulderDash-master\BoulderDash-master\secours\src\main\ja
 C:\Users\maxpa\Desktop\BoulderDash-master\BoulderDash-master\secours\src\main\java\projet\secours\dev\codenmore\tilegame\Handler.java
 C:\Users\maxpa\Desktop\BoulderDash-master\BoulderDash-master\secours\src\main\java\projet\secours\dev\codenmore\tilegame\states\MenuState.java
 C:\Users\maxpa\Desktop\BoulderDash-master\BoulderDash-master\secours\src\main\java\BDDConnector\WorldDAO.java
+C:\Users\maxpa\Desktop\BoulderDash-master\BoulderDash-master\secours\src\main\java\projet\secours\dev\codenmore\tilegame\entities\creatures\Monster.java
 C:\Users\maxpa\Desktop\BoulderDash-master\BoulderDash-master\secours\src\main\java\projet\secours\dev\codenmore\tilegame\tiles\MudTile.java

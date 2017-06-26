@@ -15,7 +15,7 @@ public abstract class Creature extends Entity {
 	protected float speed;
 	protected float xMove, yMove;
 	
-	public Creature(Handler handler, float x, float y, int width, int height) {
+	public Creature(Handler handler, int x, int y, int width, int height) {
 		super(handler, x, y, width, height);
 		health = DEFAULT_HEALTH;
 		speed = 64;
@@ -37,7 +37,16 @@ public abstract class Creature extends Entity {
 			int tx = (int) (x + xMove + bounds.x + bounds.width) / Tile.TILEWIDTH;
 			
 			if(!collisionWithTile(tx, (int) (y + bounds.y) / Tile.TILEHEIGHT) && !collisionWithTile(tx, (int) (y + bounds.y + bounds.height) / Tile.TILEHEIGHT)){
+				
+				if(handler.getWorld().getTile(((int) x)/64 + 1, ((int) y)/64) == Tile.diamondTile) {
+					handler.getWorld().setCounter(-1);
+				}
+				
 				x += xMove;
+				
+				
+				handler.getWorld().setTiles(2, ((int) x)/64, ((int) y)/64 );
+				
 				
 				
 			}else{
@@ -50,9 +59,16 @@ public abstract class Creature extends Entity {
 			int tx = (int) (x + xMove + bounds.x) / Tile.TILEWIDTH;
 			
 			if(!collisionWithTile(tx, (int) (y + bounds.y) / Tile.TILEHEIGHT) && !collisionWithTile(tx, (int) (y + bounds.y + bounds.height) / Tile.TILEHEIGHT)){
+				
+				if(handler.getWorld().getTile(((int) x)/64 - 1, ((int) y)/64) == Tile.diamondTile) {
+					handler.getWorld().setCounter(-1);
+				}
+				
 				x += xMove;
+				handler.getWorld().setTiles(2, ((int) x)/64, ((int) y)/64 );
+				
 			}else{
-				x = tx * Tile.TILEWIDTH + Tile.TILEWIDTH - bounds.x;
+				x = tx * Tile.TILEWIDTH + Tile.TILEWIDTH - bounds.x + 1;
 			}
 		}
 	}
@@ -62,16 +78,28 @@ public abstract class Creature extends Entity {
 			int ty = (int) (y + yMove + bounds.y) / Tile.TILEHEIGHT;
 			
 			if(!collisionWithTile((int) (x + bounds.x) / Tile.TILEWIDTH, ty) && !collisionWithTile((int) (x + bounds.x + bounds.width) / Tile.TILEWIDTH, ty)){
+				
+				if(handler.getWorld().getTile(((int) x)/64, ((int) y)/64 - 1) == Tile.diamondTile) {
+					handler.getWorld().setCounter(-1);
+				}
+				
 				y += yMove;
+				handler.getWorld().setTiles(2, ((int) x)/64, ((int) y)/64 );
 				
 			}else{
-				y = ty * Tile.TILEHEIGHT + Tile.TILEHEIGHT - bounds.y;
+				y = ty * Tile.TILEHEIGHT + Tile.TILEHEIGHT - bounds.y + 1;
 			}
 		}else if(yMove > 0){//Down
 			int ty = (int) (y + yMove + bounds.y + bounds.height) / Tile.TILEHEIGHT;
 			
 			if(!collisionWithTile((int) (x + bounds.x) / Tile.TILEWIDTH, ty) && !collisionWithTile((int) (x + bounds.x + bounds.width) / Tile.TILEWIDTH, ty)){
+				
+				if(handler.getWorld().getTile(((int) x)/64, ((int) y)/64 + 1) == Tile.diamondTile) {
+					handler.getWorld().setCounter(-1);
+				}
+				
 				y += yMove;
+				handler.getWorld().setTiles(2, ((int) x)/64, ((int) y)/64 );
 				
 			}else{
 				y = ty * Tile.TILEHEIGHT - bounds.y - bounds.height - 1;

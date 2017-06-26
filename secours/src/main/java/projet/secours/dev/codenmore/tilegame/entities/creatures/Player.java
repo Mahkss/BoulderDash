@@ -13,7 +13,7 @@ public class Player extends Creature {
 	//Animation
 	private Animation animDownLeft, animDownRight, animUpLeft, animUpRight, animLeft, animRight, animAfk;
 
-	public Player(Handler handler, float x, float y) {
+	public Player(Handler handler, int x, int y) {
 		super(handler, x, y, Creature.DEFAULT_CREATURE_WIDTH, Creature.DEFAULT_CREATURE_HEIGHT);
 		
 		//Hitbox

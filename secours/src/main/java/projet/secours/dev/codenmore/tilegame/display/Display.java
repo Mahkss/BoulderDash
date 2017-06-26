@@ -49,4 +49,7 @@ public class Display {
 		return frame;
 	}
 	
+	public void End(){
+		frame.dispose();
+	}
 }

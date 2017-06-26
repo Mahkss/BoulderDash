@@ -1,0 +1,25 @@
+-------------------------------------------------------------------------------
+Test set: projet.secours.dev.codenmore.tilegame.gfx.GameCameraTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 1, Skipped: 0, Time elapsed: 0.016 sec <<< FAILURE!
+testCheckBlankSpace(projet.secours.dev.codenmore.tilegame.gfx.GameCameraTest)  Time elapsed: 0.016 sec  <<< ERROR!
+java.lang.NullPointerException
+	at projet.secours.dev.codenmore.tilegame.gfx.GameCamera.checkBlankSpace(GameCamera.java:29)
+	at projet.secours.dev.codenmore.tilegame.gfx.GameCameraTest.testCheckBlankSpace(GameCameraTest.java:36)
+
+testGetxOffset(projet.secours.dev.codenmore.tilegame.gfx.GameCameraTest)  Time elapsed: 0 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: expected:<5> but was:<5.0>
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.failNotEquals(Assert.java:282)
+	at junit.framework.Assert.assertEquals(Assert.java:64)
+	at junit.framework.Assert.assertEquals(Assert.java:71)
+	at projet.secours.dev.codenmore.tilegame.gfx.GameCameraTest.testGetxOffset(GameCameraTest.java:52)
+
+testGetyOffset(projet.secours.dev.codenmore.tilegame.gfx.GameCameraTest)  Time elapsed: 0 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: expected:<2> but was:<2.0>
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.failNotEquals(Assert.java:282)
+	at junit.framework.Assert.assertEquals(Assert.java:64)
+	at junit.framework.Assert.assertEquals(Assert.java:71)
+	at projet.secours.dev.codenmore.tilegame.gfx.GameCameraTest.testGetyOffset(GameCameraTest.java:66)
+

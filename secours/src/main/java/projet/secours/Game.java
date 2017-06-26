@@ -5,6 +5,7 @@ import java.awt.image.BufferStrategy;
 
 import projet.secours.dev.codenmore.tilegame.Handler;
 import projet.secours.dev.codenmore.tilegame.display.Display;
+import projet.secours.dev.codenmore.tilegame.display.EndGame;
 import projet.secours.dev.codenmore.tilegame.gfx.Assets;
 import projet.secours.dev.codenmore.tilegame.gfx.GameCamera;
 import projet.secours.dev.codenmore.tilegame.input.KeyManager;
@@ -56,7 +57,7 @@ public class Game implements Runnable {
 		gameCamera = new GameCamera(handler, 0, 0);
 		
 		gameState = new GameState(handler);
-		menuState = new MenuState(handler);
+		
 		State.setState(gameState);
 		
 		
@@ -67,7 +68,13 @@ public class Game implements Runnable {
 		keyManager.tick();
 		
 		if(State.getState() != null)
-			State.getState().tick();
+			gameState.tick();
+		
+		if(handler.getWorld().getCounter() == 0) {
+			display.End();
+			Victory();
+			stop();
+		}
 	}
 	
 	private void render(){ /*This method is here to put all things on the screen with the variables and the position of things on the screen updated*/
@@ -141,6 +148,10 @@ public class Game implements Runnable {
 	
 	public int getHeight(){
 		return height;
+	}
+	
+	public void Victory(){
+		new EndGame(false);
 	}
 	
 	public synchronized void start(){

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 import projet.secours.dev.codenmore.tilegame.Handler;
 import projet.secours.dev.codenmore.tilegame.entities.creatures.Player;
+import projet.secours.dev.codenmore.tilegame.tiles.RockTile;
 
 public class EntityManager {
 	
@@ -24,6 +25,7 @@ public class EntityManager {
 			Entity e = entities.get(i);
 			e.tick();
 		}
+		
 	}
 	
 	public void render(Graphics g){

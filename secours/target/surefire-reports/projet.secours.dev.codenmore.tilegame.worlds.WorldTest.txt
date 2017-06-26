@@ -1,0 +1,22 @@
+-------------------------------------------------------------------------------
+Test set: projet.secours.dev.codenmore.tilegame.worlds.WorldTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.051 sec <<< FAILURE!
+testGetWidth(projet.secours.dev.codenmore.tilegame.worlds.WorldTest)  Time elapsed: 0.05 sec  <<< ERROR!
+java.lang.NullPointerException
+	at BDDConnector.BoulderDashBDDConnector.prepareCall(BoulderDashBDDConnector.java:106)
+	at BDDConnector.AbstractDAO.prepareCall(AbstractDAO.java:44)
+	at BDDConnector.WorldDAO.getLevelById(WorldDAO.java:19)
+	at projet.secours.dev.codenmore.tilegame.worlds.World.loadWorld(World.java:114)
+	at projet.secours.dev.codenmore.tilegame.worlds.World.<init>(World.java:36)
+	at projet.secours.dev.codenmore.tilegame.worlds.WorldTest.testGetWidth(WorldTest.java:34)
+
+testGetHeight(projet.secours.dev.codenmore.tilegame.worlds.WorldTest)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException
+	at BDDConnector.BoulderDashBDDConnector.prepareCall(BoulderDashBDDConnector.java:106)
+	at BDDConnector.AbstractDAO.prepareCall(AbstractDAO.java:44)
+	at BDDConnector.WorldDAO.getLevelById(WorldDAO.java:19)
+	at projet.secours.dev.codenmore.tilegame.worlds.World.loadWorld(World.java:114)
+	at projet.secours.dev.codenmore.tilegame.worlds.World.<init>(World.java:36)
+	at projet.secours.dev.codenmore.tilegame.worlds.WorldTest.testGetHeight(WorldTest.java:50)
+

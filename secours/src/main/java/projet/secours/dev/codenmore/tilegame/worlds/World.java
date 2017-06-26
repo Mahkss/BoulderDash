@@ -8,6 +8,7 @@ import projet.secours.dev.codenmore.tilegame.Handler;
 import projet.secours.dev.codenmore.tilegame.entities.EntityManager;
 import projet.secours.dev.codenmore.tilegame.entities.creatures.Player;
 import projet.secours.dev.codenmore.tilegame.entities.statics.Diamond;
+import projet.secours.dev.codenmore.tilegame.tiles.RockTile;
 import projet.secours.dev.codenmore.tilegame.tiles.Tile;
 
 
@@ -18,6 +19,8 @@ public class World {
 	private int spawnX, spawnY;
 	private int[][] tiles;
 	private static int WORLDID = 1;
+	
+	private int counter;
 	
 	//Entities
 	private EntityManager entityManager;
@@ -35,10 +38,23 @@ public class World {
 		if (WORLDID == 1) {
 			this.spawnX = 14 * 64;
 			this.spawnY = 5 * 64;
+			this.counter = 9;
 		}
 		if (WORLDID == 2) {
-			this.spawnX = width/64;
-			this.spawnY = height/64;
+			this.spawnX = 34 * 64;
+			this.spawnY = 4 * 64;
+		}
+		if (WORLDID == 3) {
+			this.spawnX = 19 * 64;
+			this.spawnY = 14 * 64;
+		}
+		if (WORLDID == 4) {
+			this.spawnX = 3 * 64;
+			this.spawnY = 19 * 64;
+		}
+		if (WORLDID == 5) {
+			this.spawnX = 19 * 64;
+			this.spawnY = 14 * 64;
 		}
 		
 		entityManager.getPlayer().setX(spawnX);
@@ -50,6 +66,7 @@ public class World {
 	
 	public void tick(){
 		entityManager.tick();
+		RockTile.SearchRockFall(this);
 	}
 	
 	public void render(Graphics g){
@@ -99,8 +116,14 @@ public class World {
 			 //TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
-		
+	}
+	
+	public int getCounter() {
+		return this.counter;
+	}
+	
+	public void setCounter(int value) {
+		this.counter += value;
 	}
 	
 	public int getWidth(){

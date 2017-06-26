@@ -4,6 +4,7 @@ import java.awt.Graphics;
 import java.awt.Rectangle;
 
 import projet.secours.dev.codenmore.tilegame.Handler;
+import projet.secours.dev.codenmore.tilegame.tiles.RockTile;
 
 public abstract class Entity {
 	
